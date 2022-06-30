@@ -1,9 +1,13 @@
 <template>
+  <div class="header">
+    <button id="back" @click="$router.go(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+    <h1>Taschenpost</h1>
+    <router-link :to="{name: 'user'}"><i class="fa-solid fa-user"></i></router-link>
+  </div>
+  <router-view></router-view>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+
   </nav>
-  <router-view/>
 </template>
 
 <style>
